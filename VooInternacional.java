@@ -1,11 +1,17 @@
-public class vooDomestico extends Voo {
+public class VooInternacional extends Voo {
 
 	private int qtdPassageiros;
 
 	private int capacidadeMax;
 
-	public vooDomestico(int qtdPassageiros, int capacidadeMax) {
+	private boolean autorizaçãoIntern;
 
+	public VooInternacional(int qtdPassageiros, int capacidadeMax) {
+
+	}
+
+	public double calcularCombustivelNec() {
+		return 0;
 	}
 
 	public double calcularCustoOp() {

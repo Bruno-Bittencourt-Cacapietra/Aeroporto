@@ -10,10 +10,14 @@ public abstract class Voo implements autorizacao{
 
 	protected double combustivelDisp;
 
-	protected boolean documentacaoReg;
+	protected boolean situDoc;
 
-	public voo(String codigo, String origem, double distanciaKm, double combustivelDisp, boolean documentacaoReg) {
-
+	public Voo(String codigo, String origem, double distanciaKm, double combustivelDisp, boolean situDoc) {
+		this.codigo = codigo;
+		this.origem = origem;
+		this.distanciaKm = distanciaKm;
+		this.combustivelDisp = combustivelDisp;
+		this.situDoc = situDoc;
 	}
 
 	public String getCodigo() {
@@ -32,12 +36,12 @@ public abstract class Voo implements autorizacao{
 		return this.distanciaKm;
 	}
 
-	public double getCombustivelDisp() {
+	public double getCombustivelDisponivel() {
 		return this.combustivelDisp;
 	}
 
-	public boolean isDocumentacaoReg() {
-		return this.documentacaoReg;
+	public boolean getSituacaoDocumento() {
+		return this.situDoc;
 	}
 
 	public double calcularCombustivelNec() {
@@ -53,16 +57,7 @@ public abstract class Voo implements autorizacao{
 	public abstract String getMotivoPend();
 
 	public void exibirResumo() {
-
-	}
-
-
-	/**
-	 * @see autorizacao#autorizaDecolagem()
-	 *  
-	 */
-	public boolean autorizaDecolagem() {
-		return false;
+		System.out.print("Código: " + codigo + "\nOrigem: " + "\nDestino: " + destino + "\nDistância: " + distanciaKm + "\nCombustível Disponível: " + combustivelDisp + "\nSituação da Documentação: " + situDoc);
 	}
 
 }
