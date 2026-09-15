@@ -4,7 +4,7 @@ public class vooDomestico extends Voo {
 
 	private int capacidadeMax;
 
-	public vooDomestico(int qtdPassageiros, int capacidadeMax) {
+	public VooDomestico(int qtdPassageiros, int capacidadeMax) {
 
 	}
 

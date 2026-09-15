@@ -2,16 +2,13 @@ public class aeroporto {
 
 	private String nome;
 
-	private ArrayList<Voos> voos;
-
-	private Voo voo;
-
+	private ArrayList<Voo> voos;
 
 	public void Aeroporto(int nome String) {
 
 	}
 
-	public boolean adicionarVoo(int Voos voo) {
+	public boolean adicionarVoo(int voo Voo) {
 		return false;
 	}
 
@@ -26,7 +23,8 @@ public class aeroporto {
 	public void listarVoosAutorizados() {
 
 	}
-	public void listarVoosNaoAutorizados() {
+
+	public void listarVoosNãoAutorizados() {
 
 	}
 

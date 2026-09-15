@@ -1,4 +1,4 @@
-public interface autorizacao {
+public interface Autorizacao {
 
 	public abstract boolean autorizaDecolagem();
 

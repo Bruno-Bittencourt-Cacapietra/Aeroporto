@@ -1,14 +1,12 @@
-public class vooInternacional extends Voo {
+public class VooInternacional extends Voo {
 
 	private int qtdPassageiros;
 
 	private int capacidadeMax;
 
-	private boolean autorizacaoIntern;
+	private boolean autorizaçãoIntern;
 
-	public vooInternacional(int qtdPassageiros, int capacidadeMax) {
-		this.capacidadeMax = capacidadeMax;
-		this.qtdPassageiros = qtdPassageiros;
+	public VooInternacional(int qtdPassageiros, int capacidadeMax) {
 
 	}
 
