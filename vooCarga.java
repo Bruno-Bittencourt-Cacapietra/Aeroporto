@@ -6,28 +6,42 @@ public class vooCarga extends Voo {
 
 	private boolean cargaInspecionada;
 
-	public vooCarga(double pesoCargaKg, double capacidadeMaxKg, boolean cargaInspecinada) {
+	public vooCarga(String codigo, String origem, String destino, double distancia, double combDisp, boolean situDoc,double pesoCargaKg, double capacidadeMaxKg, boolean cargaInspecinada) {
+		super(codigo, origem, destino, distancia, combDisp, situDoc );
+		this.capacidadeMaxKg = capacidadeMaxKg;
+		this.cargaInspecionada = cargaInspecinada;
 
 	}
 
 	public double calcularCombustivelNec() {
-		return 0;
+		return (this.ditancia * 0.15) + (this.pesoCargakg * 0.02);
 	}
 
 	public double calcularCustoOp() {
-		return 0;
+		return (10 * this.distancia) + ( 1.50 * pesoCargakg) ;
 	}
 
 	public String getTipo() {
-		return null;
+		return "Carga!"	;
 	}
 
 	public boolean autorizarDecolagem() {
+		if((this.situDoc) && (combDisp >= calcularCombustivelNec())){
+			return true;
+		}
 		return false;
 	}
 
 	public String getMotivoPend() {
-		return null;
+		if (!this.situDoc){
+			return "Documentação pendente.";
+		}
+		if(combDisp >= calcularCombustivelNec()){
+			return "Combustivel insuficiente.";
+		}
+		if(combDisp >= calcularCombustivelNec() && )
+
+		return ;
 	}
 
 }
