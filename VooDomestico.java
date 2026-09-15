@@ -1,4 +1,4 @@
-public class vooDomestico extends Voo {
+public class VooDomestico extends Voo {
 
 	private int qtdPassageiros;
 
